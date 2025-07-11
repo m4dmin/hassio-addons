@@ -1,12 +1,29 @@
 {
-  "bolt": {
-    "path": "/data/semaphore.db"
+  "name": "Ansible Semaphore",
+  "version": "1.0.0",
+  "slug": "ansible_semaphore",
+  "description": "Home Assistant Add-on for Ansible Semaphore",
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "3000/tcp": 3000
   },
-  "web_host": "0.0.0.0:3000",
-  "tmp_path": "/tmp/semaphore",
-  "cookie_hash": "e76f84734b4729879fba5caa1c6b431b",
-  "cookie_encryption": "04ae73e17e61a6ed9d9b9142907e2f8f",
-  "access_key_encryption": "eb826bf60b246d1b7dfcb8ed36e2372f",
-  "email_alert": false,
-  "ldap_enable": false
+  "ingress": true,
+  "panel_icon": "mdi:ansible",
+  "arch": ["amd64", "aarch64"],
+  "map": ["data:rw"],
+  "options": {
+    "SEMAPHORE_DB_DIALECT": "bolt",
+    "SEMAPHORE_ADMIN": "admin",
+    "SEMAPHORE_ADMIN_PASSWORD": "changeme",
+    "SEMAPHORE_ADMIN_NAME": "Admin",
+    "SEMAPHORE_ADMIN_EMAIL": "admin@localhost"
+  },
+  "schema": {
+    "SEMAPHORE_DB_DIALECT": "str",
+    "SEMAPHORE_ADMIN": "str",
+    "SEMAPHORE_ADMIN_PASSWORD": "str",
+    "SEMAPHORE_ADMIN_NAME": "str",
+    "SEMAPHORE_ADMIN_EMAIL": "str"
+  }
 }
