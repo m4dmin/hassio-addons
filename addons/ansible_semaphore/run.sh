@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
-CONFIG_PATH="/data/config.json"
+echo "📁 Add-on Data Directory: /data"
+export SEMAPHORE_DB_DIALECT=bolt
+export SEMAPHORE_BOLT_PATH=/data/semaphore.db
 
-if [ ! -f "$CONFIG_PATH" ]; then
-  echo "❌ config.json not found in $CONFIG_PATH"
-  exit 1
-fi
+export SEMAPHORE_ADMIN="${SEMAPHORE_ADMIN}"
+export SEMAPHORE_ADMIN_PASSWORD="${SEMAPHORE_ADMIN_PASSWORD}"
+export SEMAPHORE_ADMIN_NAME="${SEMAPHORE_ADMIN_NAME}"
+export SEMAPHORE_ADMIN_EMAIL="${SEMAPHORE_ADMIN_EMAIL}"
 
-echo "✅ Found config, starting Ansible Semaphore..."
-exec semaphore server --config "$CONFIG_PATH"
+echo "▶️ Starting Ansible Semaphore..."
+exec semaphore server
