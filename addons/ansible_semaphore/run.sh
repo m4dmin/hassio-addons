@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-CONFIG_FILE=/data/config.json
+CONFIG_PATH="/data/config.json"
 
-if [ ! -f "$CONFIG_FILE" ]; then
-  echo "❌ Config not found: $CONFIG_FILE"
+if [ ! -f "$CONFIG_PATH" ]; then
+  echo "❌ config.json not found in $CONFIG_PATH"
   exit 1
 fi
 
-echo "▶️ Starting Semaphore with config at $CONFIG_FILE"
-exec semaphore server --config "$CONFIG_FILE"
+echo "✅ Found config, starting Ansible Semaphore..."
+exec semaphore server --config "$CONFIG_PATH"
