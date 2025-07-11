@@ -2,25 +2,23 @@
   "name": "Ansible Semaphore",
   "version": "1.0.0",
   "slug": "ansible_semaphore",
-  "description": "Home Assistant Add-on for Ansible Semaphore",
+  "description": "Webinterface fpr Ansible-Jobs",
   "startup": "application",
   "boot": "auto",
+  "ingress": true,
+  "panel_icon": "mdi:ansible",
   "ports": {
     "3000/tcp": 3000
   },
-  "ingress": true,
-  "panel_icon": "mdi:ansible",
-  "arch": ["amd64", "aarch64"],
   "map": ["data:rw"],
+  "arch": ["amd64", "aarch64"],
   "options": {
-    "SEMAPHORE_DB_DIALECT": "bolt",
     "SEMAPHORE_ADMIN": "admin",
     "SEMAPHORE_ADMIN_PASSWORD": "changeme",
-    "SEMAPHORE_ADMIN_NAME": "Admin",
-    "SEMAPHORE_ADMIN_EMAIL": "admin@localhost"
+    "SEMAPHORE_ADMIN_NAME": "HA Admin",
+    "SEMAPHORE_ADMIN_EMAIL": "admin@example.com"
   },
   "schema": {
-    "SEMAPHORE_DB_DIALECT": "str",
     "SEMAPHORE_ADMIN": "str",
     "SEMAPHORE_ADMIN_PASSWORD": "str",
     "SEMAPHORE_ADMIN_NAME": "str",
