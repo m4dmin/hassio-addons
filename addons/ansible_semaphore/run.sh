@@ -3,7 +3,6 @@ set -e
 
 echo "Testing write permission in /data..."
 ls -l /data
-cat /data/options.json
 touch /data/testfile && rm /data/testfile
 echo "Write test passed"
 
@@ -20,17 +19,29 @@ if [ ! -f "$CONFIG_PATH" ]; then
   cat > "$CONFIG_PATH" << EOF
 {
   "bolt": {
-    "path": "$DB_PATH"
+    "host": "$DB_PATH"
   },
-  "web_host": "0.0.0.0:3000",
+  "dialect": "bolt",
   "tmp_path": "/tmp/semaphore",
   "cookie_hash": "$(generate_random_key)",
   "cookie_encryption": "$(generate_random_key)",
-  "access_key_encryption": "$(generate_random_key)",
-  "email_alert": false,
-  "ldap_enable": false
+  "access_key_encryption": "$(generate_random_key)"
 }
 EOF
+
+  semaphore user add --admin \
+    --login admin \
+    --password password \
+    --name "Admin" \
+    --email "admin@localhost" \
+    --config $CONFIG_PATH
+
+#  semaphore user add --admin \
+#    --login ${SEMAPHORE_ADMIN} \
+#    --password ${SEMAPHORE_ADMIN_PASSWORD} \
+#    --name ${SEMAPHORE_ADMIN_NAME} \
+#    --email ${SEMAPHORE_ADMIN_EMAIL} \
+#    --config $CONFIG_PATH
 
   echo "✅ Config generated"
 fi
