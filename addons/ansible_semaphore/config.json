@@ -1,6 +1,6 @@
 {
     "name": "Ansible Semaphore",
-    "version": "1.0.0",
+    "version": "0.9.0",
     "slug": "ansible_semaphore",
     "description": "Home Assistant Add‑on for Ansible Semaphore",
     "startup": "application",
