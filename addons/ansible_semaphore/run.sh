@@ -3,13 +3,28 @@ set -e
 
 : "${ADMIN_USER:=admin}"
 : "${ADMIN_PASSWORD:=secret}"
-: "${DB_NAME:=/data/semaphore.db}"
+: "${DB_FILE:=/data/semaphore.db}"
+: "${CONFIG_FILE:=/data/config.json}"
 
-# If the database file does not exist, perform first-time setup
-if [ ! -f "${DB_NAME}" ]; then
-  echo "🎉 First-time setup – creating admin user and database"
-  semaphore setup --db "${DB_NAME}" --user "${ADMIN_USER}" --pass "${ADMIN_PASSWORD}"
+if [ ! -f "$DB_FILE" ]; then
+  echo "🎉 First-time setup – generating config and initializing database"
+
+  semaphore setup \
+    --config "$CONFIG_FILE" \
+    --admin "$ADMIN_USER" \
+    --admin-password "$ADMIN_PASSWORD" \
+    --admin-name "Home Assistant" \
+    --admin-email "ha@example.com" \
+    --database-dialect "bolt" \
+    --database "$DB_FILE" \
+    --tmp-path "/tmp/semaphore" \
+    --playbook-path "/tmp/playbooks" \
+    --inventory-path "/tmp/inventory" \
+    --ssh-key-path "/tmp/keys" \
+    --env-path "/tmp/env"
+
+  echo "✅ Config and DB created"
 fi
 
 echo "▶️ Starting Semaphore Web UI"
-exec semaphore server --db "${DB_NAME}"
+exec semaphore server --config "$CONFIG_FILE"
