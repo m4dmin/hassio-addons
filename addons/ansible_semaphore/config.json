@@ -10,7 +10,6 @@
   "ports": {
     "3000/tcp": 3000
   },
-  "map": ["data:rw"],
   "arch": ["amd64", "aarch64"],
   "options": {
     "SEMAPHORE_ADMIN": "admin",
