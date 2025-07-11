@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+echo "Testing write permission in /data..."
+touch /data/testfile && rm /data/testfile
+echo "Write test passed"
+
 CONFIG_PATH="/data/config.json"
 DB_PATH="/data/semaphore.db"
 
