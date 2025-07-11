@@ -2,6 +2,7 @@
 set -e
 
 echo "Testing write permission in /data..."
+ls -l /data
 touch /data/testfile && rm /data/testfile
 echo "Write test passed"
 
