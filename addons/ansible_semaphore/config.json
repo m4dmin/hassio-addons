@@ -1,6 +1,6 @@
 {
   "name": "Ansible Semaphore",
-  "version": "1.0.0",
+  "version": "0.9.1",
   "slug": "ansible_semaphore",
   "description": "Webinterface fpr Ansible-Jobs",
   "startup": "application",
