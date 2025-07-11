@@ -10,4 +10,4 @@ https://github.com/m4dmin/hassio-addons
 ```
 
 ## Add-ons in this repository
- - **[Ansible Semaphone](/addons/ansible-semaphore/README.md)**: Create snapshots and store them on a Samba share.
+ - **[Ansible Semaphone](/addons/ansible-semaphore/README.md)**: Operate Ansible Semaphore as Home Assistant addon
