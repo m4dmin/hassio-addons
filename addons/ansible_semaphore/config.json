@@ -1,0 +1,26 @@
+{
+    "name": "Ansible Semaphore",
+    "version": "1.0.0",
+    "slug": "ansible_semaphore",
+    "description": "Home Assistant Add‑on for Ansible Semaphore",
+    "startup": "application",
+    "boot": "auto",
+    "ports": {
+      "3000/tcp": 3000
+    },
+    "ingress": true,
+    "panel_icon": "mdi:ansible",
+    "arch": ["amd64", "aarch64"],
+    "map": ["data:rw"],
+    "options": {
+      "ADMIN_USER": "admin",
+      "ADMIN_PASSWORD": "secret",
+      "DB_NAME": "/data/semaphore.db"
+    },
+    "schema": {
+      "ADMIN_USER": "str",
+      "ADMIN_PASSWORD": "str",
+      "DB_NAME": "str"
+    }
+  }
+  
