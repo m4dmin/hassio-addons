@@ -14,13 +14,10 @@
     "map": ["data:rw"],
     "options": {
       "ADMIN_USER": "admin",
-      "ADMIN_PASSWORD": "secret",
-      "DB_NAME": "/data/semaphore.db"
+      "ADMIN_PASSWORD": "secret"
     },
     "schema": {
       "ADMIN_USER": "str",
-      "ADMIN_PASSWORD": "str",
-      "DB_NAME": "str"
+      "ADMIN_PASSWORD": "str"
     }
   }
-  
