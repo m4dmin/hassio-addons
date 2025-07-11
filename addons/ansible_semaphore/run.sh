@@ -3,6 +3,7 @@ set -e
 
 echo "Testing write permission in /data..."
 ls -l /data
+cat /data/options.json
 touch /data/testfile && rm /data/testfile
 echo "Write test passed"
 
