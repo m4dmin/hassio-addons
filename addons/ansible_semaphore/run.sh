@@ -21,7 +21,7 @@ if [ ! -f "$CONFIG_PATH" ]; then
     "host": "$DB_PATH"
   },
   "dialect": "bolt",
-  "web_host": "0.0.0.0:3000",
+  "web_host": "http://0.0.0.0:3000",
   "tmp_path": "/tmp/semaphore",
   "cookie_hash": "$(generate_random_key)",
   "cookie_encryption": "$(generate_random_key)",
