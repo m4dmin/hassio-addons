@@ -1,0 +1,18 @@
+name: Semaphore UI
+version: 0.9.3
+slug: ansible_semaphore
+description: Modern UI for Ansible, Terraform/OpenTofu/Terragrunt, PowerShell and other DevOps tools.
+startup: application
+boot: auto
+ingress: true
+panel_icon: mdi:ansible
+arch:
+  - amd64
+  - aarch64
+map:
+  - data:rw
+options:
+  SEMAPHORE_ADMIN: admin
+  SEMAPHORE_ADMIN_PASSWORD: changeme
+  SEMAPHORE_ADMIN_NAME: HA-Admin
+  SEMAPHORE_ADMIN_EMAIL: admin@example.com
