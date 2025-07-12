@@ -1,5 +1,5 @@
 name: Semaphore UI
-version: 0.9.4
+version: 0.9.5
 slug: ansible_semaphore
 description: Modern UI for Ansible, Terraform/OpenTofu/Terragrunt, PowerShell and other DevOps tools.
 startup: application
@@ -16,5 +16,3 @@ options:
   SEMAPHORE_ADMIN_PASSWORD: changeme
   SEMAPHORE_ADMIN_NAME: HA-Admin
   SEMAPHORE_ADMIN_EMAIL: admin@example.com
-schema:
-  TESTSCHEMA: testschema
