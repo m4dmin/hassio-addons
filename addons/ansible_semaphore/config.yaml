@@ -5,6 +5,7 @@ description: Modern UI for Ansible, Terraform/OpenTofu/Terragrunt, PowerShell an
 startup: services
 boot: auto
 ingress: true
+ingress_port: 3000
 panel_icon: mdi:ansible
 arch:
   - amd64
