@@ -16,3 +16,5 @@ options:
   SEMAPHORE_ADMIN_PASSWORD: changeme
   SEMAPHORE_ADMIN_NAME: HA-Admin
   SEMAPHORE_ADMIN_EMAIL: admin@example.com
+schema:
+  TESTSCHEMA: testschema
