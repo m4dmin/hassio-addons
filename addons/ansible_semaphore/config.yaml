@@ -1,5 +1,5 @@
 name: Semaphore UI
-version: 0.9.3
+version: 0.9.4
 slug: ansible_semaphore
 description: Modern UI for Ansible, Terraform/OpenTofu/Terragrunt, PowerShell and other DevOps tools.
 startup: application
