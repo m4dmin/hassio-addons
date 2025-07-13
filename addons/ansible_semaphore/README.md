@@ -22,6 +22,18 @@ This Home Assistant add-on provides a fully integrated instance of [Ansible Sema
 
 ---
 
+## 🚧 Known Limitation: Ingress Not Supported
+
+Currently, **Home Assistant Ingress is not supported** due to technical limitations in the Semaphore web interface (it uses absolute paths that are incompatible with Ingress URLs).
+
+To use Semaphore inside Home Assistant, you can:
+
+1. Disable ingress in the add-on configuration.
+2. Expose port `3000`.
+3. Integrate the UI manually into the Home Assistant sidebar using an IFrame panel.
+
+---
+
 ## 🚀 Getting Started
 
 1. Go to **Settings → Add-ons → Add-on Store**.

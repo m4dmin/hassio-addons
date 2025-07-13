@@ -1,12 +1,12 @@
 name: Semaphore UI
-version: 0.9.16
+version: 0.9.17
 slug: ansible_semaphore
 description: Modern UI for Ansible, Terraform/OpenTofu/Terragrunt, PowerShell and other DevOps tools.
 startup: services
 boot: auto
-ingress: true
-ingress_port: 3000
-ingress_stream: true
+#ingress: true
+#ingress_port: 3000
+#ingress_stream: true
 ports:
   3000/tcp: 3000
 ports_description:
