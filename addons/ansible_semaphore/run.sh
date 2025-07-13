@@ -42,4 +42,4 @@ EOF
 fi
 
 log "▶️ Starting Semaphore server"
-exec semaphore server --config "$CONFIG_PATH"
+exec semaphore server --log-level DEBUG --config "$CONFIG_PATH"

@@ -4,6 +4,14 @@
 
 This Home Assistant add-on provides a fully integrated instance of [Ansible Semaphore](https://ansible-semaphore.com/), a modern web-based interface for running Ansible playbooks.
 
+### 📢 Project Status
+
+> ⚠️ **This Home Assistant add-on is currently under active development.**  
+> Features, configurations, and behavior may change frequently.  
+> Use with caution in production environments and feel free to provide feedback or contribute.
+
+---
+
 ## 🧩 Features
 
 - Full-featured [Ansible Semaphore](https://github.com/ansible-semaphore/semaphore)
