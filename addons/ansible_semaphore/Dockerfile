@@ -9,4 +9,6 @@ WORKDIR /data
 
 COPY --chmod=755 run.sh /run.sh
 
+EXPOSE 3000
+
 CMD ["/run.sh"]
