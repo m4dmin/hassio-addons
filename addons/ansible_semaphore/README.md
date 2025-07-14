@@ -1,8 +1,5 @@
 # Ansible Semaphore - Home Assistant Add-on
 
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-
 [<img src="https://raw.githubusercontent.com/m4dmin/hassio-addons/refs/heads/main/images/donate-paypal.svg" width=200/>](https://www.paypal.com/donate/?hosted_button_id=D7LSBKRSMHCTW)
 
 [![Ansible Semaphore](https://img.shields.io/badge/addon-ansible--semaphore-blue)](https://github.com/m4dmin/hassio-addons/tree/main/addons/ansible_semaphore)
