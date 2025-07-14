@@ -1,7 +1,5 @@
 # Ansible Semaphore - Home Assistant Add-on
 
-[![License][license-shield]](LICENSE.md)
-
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
 
