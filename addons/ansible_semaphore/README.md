@@ -1,5 +1,13 @@
 # Ansible Semaphore - Home Assistant Add-on
 
+![Project Stage][experimental]
+[![License][license-shield]](LICENSE.md)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+
+[<img src="https://raw.githubusercontent.com/m4dmin/hassio-addons/master/images/donate-paypal.svg" width=200/>](https://www.paypal.com/donate/?hosted_button_id=D7LSBKRSMHCTW)
+
 [![Ansible Semaphore](https://img.shields.io/badge/addon-ansible--semaphore-blue)](https://github.com/m4dmin/hassio-addons/tree/main/addons/ansible_semaphore)
 
 This Home Assistant add-on provides a fully integrated instance of [Ansible Semaphore](https://ansible-semaphore.com/), a modern web-based interface for running Ansible playbooks.
