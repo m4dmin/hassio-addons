@@ -21,7 +21,7 @@ if [ ! -f "$CONFIG_PATH" ]; then
     "host": "$DB_PATH"
   },
   "dialect": "bolt",
-  "port": "3001",
+  "port": "3100",
   "tmp_path": "/tmp/semaphore",
   "cookie_hash": "$(generate_random_key)",
   "cookie_encryption": "$(generate_random_key)",
@@ -41,8 +41,8 @@ EOF
   log "✅ Config and admin user created"
 fi
 
-log "🌐 Starting nginx reverse proxy"
-nginx
+#log "🌐 Starting nginx reverse proxy"
+#nginx
 
-log "▶️ Starting Semaphore server on port 3001"
+log "▶️ Starting Semaphore server on port 3100"
 exec semaphore server --log-level DEBUG --config "$CONFIG_PATH"
